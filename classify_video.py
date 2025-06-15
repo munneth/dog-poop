@@ -5,7 +5,7 @@ from ultralytics import YOLO
 model = YOLO("runs/classify/train3/weights/best.pt")
 
 # Path to the .mp4 video you want to test
-video_path = "sample_clip.mp4"
+video_path = "/home/munneth/dog-poop/1057906156-preview.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Optionally save output
