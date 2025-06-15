@@ -24,3 +24,8 @@ test/**/*.bmp
 .vscode/
 __pycache__/
 *.pyc
+
+# Ignore Python virtual environment
+yolovenv/
+
+runs/
