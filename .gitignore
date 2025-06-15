@@ -1,0 +1,26 @@
+# Ignore image files in train, val, and test directories
+train/**/*.jpg
+train/**/*.jpeg
+train/**/*.png
+train/**/*.bmp
+
+val/**/*.jpg
+val/**/*.jpeg
+val/**/*.png
+val/**/*.bmp
+
+test/**/*.jpg
+test/**/*.jpeg
+test/**/*.png
+test/**/*.bmp
+
+# Optional: ignore model weight files
+*.pt
+
+# Optional: ignore dataset zips
+*.zip
+
+# VS Code and Python cache
+.vscode/
+__pycache__/
+*.pyc
