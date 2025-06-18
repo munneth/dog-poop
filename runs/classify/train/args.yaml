@@ -1,7 +1,7 @@
 task: classify
 mode: train
 model: yolov8n-cls.pt
-data: poop_classification
+data: your_dataset
 epochs: 50
 time: null
 patience: 100

@@ -14,8 +14,7 @@ test/**/*.jpeg
 test/**/*.png
 test/**/*.bmp
 
-# Optional: ignore model weight files
-*.pt
+
 
 # Optional: ignore dataset zips
 *.zip
@@ -28,6 +27,6 @@ __pycache__/
 # Ignore Python virtual environment
 yolovenv/
 
-runs/
+
 
 test/
