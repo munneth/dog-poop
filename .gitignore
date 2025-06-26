@@ -1,0 +1,23 @@
+# Ignore virtual environments
+yolovenv/
+Ultraanlytics/yolovenv/
+
+# Ignore any Python environment files
+*.pyc
+__pycache__/
+
+# If using Conda or pip venvs
+*.conda
+*.sh
+
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.gif
+*.ico
+*.webp
+*.svg
+*.eps
+*.pdf
