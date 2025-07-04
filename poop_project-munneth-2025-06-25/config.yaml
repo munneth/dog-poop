@@ -11,12 +11,23 @@ project_path: C:/Users/munne/Documents/DLC/poop_project-munneth-2025-06-25
     # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
   C:\Users\munne\Documents\DLC\poop_project-munneth-2025-06-25\videos\IMG_8437.MP4:
-    crop: 0, 1920, 0, 1440
+    crop: null
+
 bodyparts:
-- bodypart1
-- bodypart2
-- bodypart3
-- objectA
+- spine1
+- spine2
+- spine3
+- tail1
+- tail2
+- tail3
+
+# Frame extraction
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
 
     # Fraction of video to start/stop when extracting frames for labeling/refinement
 
@@ -27,10 +38,16 @@ numframes2pick: 20
 
     # Plotting configuration
 skeleton:
-- - bodypart1
-  - bodypart2
-- - objectA
-  - bodypart3
+- - spine1
+  - spine2
+- - spine2
+  - spine3
+- - spine3
+  - tail1
+- - tail1
+  - tail2
+- - tail2
+  - tail3
 skeleton_color: black
 pcutoff: 0.6
 dotsize: 12
