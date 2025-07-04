@@ -68,6 +68,12 @@ def sync_commit():
         stdout, stderr, code = run_command("git push --verbose origin main")
         if code != 0:
             print(f"❌ Alternative push also failed: {stderr}")
+            print("🔄 Resetting commit with 'git reset --soft HEAD~1' for manual handling later")
+            reset_stdout, reset_stderr, reset_code = run_command("git reset --soft HEAD~1")
+            if reset_code == 0:
+                print("✅ Reset successful - commit changes are staged and ready for manual handling")
+            else:
+                print(f"❌ Reset failed: {reset_stderr}")
             return False
     
     print("✅ Synced to remote successfully")
@@ -124,8 +130,8 @@ def main():
                 print(f"✅ Successfully committed and synced: {filename}")
             else:
                 failed_commits += 1
-                print(f"❌ Failed to sync: {filename}")
-                # Continue with next file even if sync fails
+                print(f"❌ Failed to sync: {filename} - reset for manual handling")
+                # Continue with next file - the commit has been reset and is ready for manual handling
         else:
             failed_commits += 1
             print(f"❌ Failed to commit: {filename}")
@@ -141,7 +147,10 @@ def main():
     print(f"📁 Total files processed: {len(unique_files)}")
     
     if failed_commits > 0:
-        print(f"\n⚠️  {failed_commits} commits failed. Check the output above for details.")
+        print(f"\n⚠️  {failed_commits} commits failed to sync and were reset for manual handling.")
+        print("📝 You can manually commit and sync these files later using:")
+        print("   git commit -m 'Your message'")
+        print("   git push origin main")
     else:
         print(f"\n🎉 All {successful_commits} files committed and synced successfully!")
 
