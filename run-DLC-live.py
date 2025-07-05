@@ -1,10 +1,10 @@
-import deeplabcut
+from dlclive import DLCLive
 
-# Use the path to your project config.yaml
-config_path = r"C:\Users\munne\Documents\DLC\poop_project-munneth-2025-06-25\config.yaml"
+model_path = r"C:\Users\munne\Documents\DLC\poop_project-munneth-2025-06-25\exported-models\DLC_poop_project_resnet_50_iteration-0_shuffle-1"
+dlc_live = DLCLive(model_path)
 
-# This will export using the best snapshot (or you can specify which snapshot)
-deeplabcut.export_model(config_path)
+print("Model loaded successfully!")
+
 
 
 
