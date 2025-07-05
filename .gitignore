@@ -21,3 +21,9 @@ __pycache__/
 *.svg
 *.eps
 *.pdf
+*.index
+*.meta
+*.h5
+*.mp4
+*.mov
+*.MOV
