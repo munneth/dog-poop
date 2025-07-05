@@ -6,12 +6,12 @@ multianimalproject: false
 identity:
 
     # Project path (change when moving around)
-project_path: C:/Users/munne/Documents/DLC/poop_project-munneth-2025-06-25
+project_path: C:\Users\munne\Documents\DLC\poop_project-munneth-2025-06-25
 
     # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
   C:\Users\munne\Documents\DLC\poop_project-munneth-2025-06-25\videos\IMG_8437.MP4:
-    crop: null
+    crop:
 
 bodyparts:
 - spine1
@@ -22,6 +22,8 @@ bodyparts:
 - tail3
 
 # Frame extraction
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
 
     # Fraction of video to start/stop when extracting frames for labeling/refinement
 
