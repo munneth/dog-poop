@@ -1,5 +1,7 @@
 from dlclive import DLCLive, Processor
 import cv2
+import time
+from collections import deque
 
 dlc_proc = Processor()
 # Use the exported model folder
@@ -10,6 +12,9 @@ dlc_live = DLCLive(model_path)
 
 # Open webcam (or your video capture device)
 cap = cv2.VideoCapture(0)
+
+#pose buffer
+pose_buffer = deque(maxlen=150)
 
 while True:
     ret, frame = cap.read()
